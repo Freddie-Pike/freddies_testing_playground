@@ -11,12 +11,6 @@
   },
   "author": "",
   "license": "ISC",
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
-  },
   "dependencies": {
     "path": "^0.12.7",
     "react": "^16.8.6",
