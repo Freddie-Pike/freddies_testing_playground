@@ -51,7 +51,6 @@ export default function Modal({
     documentListener(
       "mousedown",
       (event) => {
-        debugger;
         const clickWasInDialog = [
           document.getElementById("context-menu-container"),
         ].some((element) => element?.contains(event.target));
@@ -71,7 +70,6 @@ export default function Modal({
           <div
             ref={inside}
             onAnimationEnd={({ animationName }) => {
-              debugger;
               setOpenOrAnimating(!animationName.includes("out"));
             }}
             {...props}
