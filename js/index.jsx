@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { render } from "react-dom";
 import Modal from "./components/Modal";
+import GreeterUI from "./components/GreeterUI";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -14,6 +15,7 @@ function App() {
       >
         Show a cool modal!
       </button>
+      <GreeterUI person="Fred" />
       <Modal show={showModal} onClickOutside={() => setShowModal(false)}>
         Close the modal by clicking outside of the modal : )
       </Modal>
