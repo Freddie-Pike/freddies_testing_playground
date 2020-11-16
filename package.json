@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch --runInBand",
     "build": "webpack -p --progress --config webpack.config.js",
     "dev-build": "webpack --progress -d --config webpack.config.js",
     "watch": "webpack --progress -d --config webpack.config.js --watch"
@@ -12,6 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -19,6 +23,7 @@
     "greeter": "git@github.com:Freddie-Pike/typescript_import_test.git#semver:0.0.1"
   },
   "devDependencies": {
+    "core-js": "^3.6.4",
     "jest": "^26.5.2",
     "jest-watch-typeahead": "^0.6.0",
     "@babel/core": "^7.7.7",

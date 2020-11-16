@@ -23,6 +23,7 @@ module.exports = {
   moduleDirectories: ["node_modules", "js"],
   moduleNameMapper: mockGreeter,
   resetMocks: true,
+  setupFilesAfterEnv: ["<rootDir>/test/setupTests.js"],
   testEnvironment: "jsdom",
   transformIgnorePatterns: ["<rootDir>/node_modules/(?!${greeter})"],
   watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
