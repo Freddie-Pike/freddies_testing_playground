@@ -1,10 +1,22 @@
+import React, { useState } from "react";
 import { render } from "react-dom";
-import React from "react";
+import Modal from "./components/Modal";
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="main-page-wrapper">
-      <div className="main-page-container">ABCS</div>
+      <button
+        onClick={() => {
+          setShowModal(true);
+        }}
+      >
+        Show a cool modal!
+      </button>
+      <Modal show={showModal} onClickOutside={() => setShowModal(false)}>
+        Close the modal by clicking outside of the modal : )
+      </Modal>
     </div>
   );
 }
