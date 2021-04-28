@@ -17,7 +17,6 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "classnames": "^2.2.6",
-    "greeter": "git@github.com:Freddie-Pike/greeter.git#semver:0.0.1",
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
