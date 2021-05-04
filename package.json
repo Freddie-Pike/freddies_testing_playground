@@ -19,8 +19,7 @@
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "classnames": "^2.2.6",
-    "greeter": "git@github.com:Freddie-Pike/greeter.git#semver:0.0.1"
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
     "core-js": "^3.6.4",
