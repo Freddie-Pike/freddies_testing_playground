@@ -5,15 +5,6 @@ const commonModuleNameMappers = {
   "\\.(css|scss)$": require.resolve("./__mocks__/empty_mock.js"),
 };
 
-// Not ideal solution, but this doesn't work either. Replace the following on module.exports to test this:
-// moduleNameMapper: commonModuleNameMappers -> moduleNameMapper: mockGreeter,
-const mockGreeter = {
-  ...commonModuleNameMappers,
-  ...{
-    "\\.(greeter)$": require.resolve("./__mocks__/empty_mock.js"),
-  },
-};
-
 module.exports = {
   rootDir: path.join(__dirname, "./"),
   transform: {
@@ -21,7 +12,6 @@ module.exports = {
   },
   moduleFileExtensions: ["js", "jsx"],
   moduleDirectories: ["node_modules", "js"],
-  moduleNameMapper: mockGreeter,
   resetMocks: true,
   setupFilesAfterEnv: ["<rootDir>/test/setupTests.js"],
   testEnvironment: "jsdom",

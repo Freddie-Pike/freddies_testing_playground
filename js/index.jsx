@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { render } from "react-dom";
 import Button from "./components/Button/Button";
-import GreeterUI from "./components/GreeterUI/GreeterUI";
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       >
         Test Button
       </Button>
-      <GreeterUI person="Fred" />
     </div>
   );
 }
