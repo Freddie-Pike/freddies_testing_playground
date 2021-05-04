@@ -2,3 +2,4 @@ node_modules/
 .DS_Store
 webpack_bundle/
 docs/
+jest.results.json
