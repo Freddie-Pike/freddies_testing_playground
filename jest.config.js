@@ -26,7 +26,11 @@ module.exports = {
   setupFilesAfterEnv: ["<rootDir>/test/setupTests.js"],
   testEnvironment: "jsdom",
   transformIgnorePatterns: ["node_modules/(?!${greeter})"],
-  watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
+  watchPlugins: [
+    "jest-watch-typeahead/filename",
+    "jest-watch-typeahead/testname",
+  ],
   moduleNameMapper: commonModuleNameMappers,
   verbose: true,
+  collectCoverageFrom: ["example_test/**/*.{js,jsx}", "js/**/*.{js,jsx}"],
 };
