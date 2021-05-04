@@ -33,4 +33,5 @@ module.exports = {
   moduleNameMapper: commonModuleNameMappers,
   verbose: true,
   collectCoverageFrom: ["example_test/**/*.{js,jsx}", "js/**/*.{js,jsx}"],
+  coverageDirectory: "docs/coverage",
 };
