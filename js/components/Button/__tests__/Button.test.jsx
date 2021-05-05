@@ -17,6 +17,6 @@ describe("Button", () => {
 
     userEvent.click(button);
 
-    expect(onClickMock).toHaveBeenCalledTimes(1000);
+    expect(onClickMock).toHaveBeenCalledTimes(1);
   });
 });
