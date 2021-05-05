@@ -20,9 +20,6 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov
-        python -m pytest --cov=./python_code/tests --cov-report=xml:python_code/coverage.yml
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        path-to-lcov: python_code/coverage.yml
+        python -m pytest --cov=./python_code/tests > pytest-coverage.txt
+    - name: Comment coverage
+      uses: coroo/pytest-coverage-commentator@v1.0.2
