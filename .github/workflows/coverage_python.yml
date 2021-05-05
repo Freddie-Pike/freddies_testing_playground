@@ -20,6 +20,6 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov
-        python -m pytest --cov=./python_code/tests > pytest-coverage.txt
+        python -m pytest --cov=./python_code/code > pytest-coverage.txt
     - name: Comment coverage
       uses: coroo/pytest-coverage-commentator@v1.0.2
