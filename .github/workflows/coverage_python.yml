@@ -24,12 +24,7 @@ jobs:
         pytest-root-dir: './python_code/code'
         cov-omit-list: 'test/*, temp/main3.py, temp/main4.py'
         cov-threshold-single: 80
-        cov-threshold-total: 80
-    - name: Coverage single fail - exit
-      if: ${{ steps.pytest.outputs.cov-threshold-single-fail == 'true' }}
-      run: |
-        echo "cov single fail ${{ steps.pytest.outputs.cov-threshold-single-fail }}"
-        exit 1
+        cov-threshold-total: 20
     - name: Coverage total fail - exit
       if: ${{ steps.pytest.outputs.cov-threshold-total-fail == 'true' }}
       run: |
