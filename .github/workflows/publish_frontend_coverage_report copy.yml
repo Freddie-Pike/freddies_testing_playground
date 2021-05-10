@@ -19,5 +19,5 @@ jobs:
     - name: Deploy Frontend Coverage Report
       uses: JamesIves/github-pages-deploy-action@4.1.2
       with:
-        branch: gh-pages-frontend-coverage 
+        branch: gh-pages
         folder: docs/coverage 
