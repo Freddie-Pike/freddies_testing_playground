@@ -1,11 +1,11 @@
-name: Build and publish test coverage 
+name: Build and publish backend test coverage 
 on:
   push:
     branches:
       - master
 jobs:
   build:
-    name: Build and publish test coverage 
+    name: Build and publish backend test coverage  
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
