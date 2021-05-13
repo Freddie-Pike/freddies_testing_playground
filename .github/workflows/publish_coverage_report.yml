@@ -1,14 +1,21 @@
-name: Build and publish backend test coverage 
+name: Build and publish test coverage report.
 on:
   push:
     branches:
       - master
 jobs:
   build:
-    name: Build and publish backend test coverage  
+    name: Build and publish test coverage report.  
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - name: Run Jest tests and generate coverage report
+      run: npm test
     - name: Set up Python 3.8.10
       uses: actions/setup-python@v1
       with:
@@ -18,9 +25,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r ./python_code/requirements.txt
     - name: Run pytest tests.
-      run: pytest --cov=./python_code/code --cov-report=html:./docs/python_coverage test
-    - name: Deploy Backend Coverage Report
+      run: pytest --cov=./python_code/code --cov-report=html:./docs/python_coverage ./python_code/tests
+    - name: Deploy Coverage Report
       uses: JamesIves/github-pages-deploy-action@4.1.2
       with:
         branch: gh-pages
-        folder: docs/coverage 
+        folder: docs 
