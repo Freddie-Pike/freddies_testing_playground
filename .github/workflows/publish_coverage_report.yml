@@ -1,5 +1,8 @@
 name: Build and publish test coverage report.
-on: pull_request
+on:
+  push:
+    branches:
+      - master
 jobs:
   build:
     name: Build and publish test coverage report.  
