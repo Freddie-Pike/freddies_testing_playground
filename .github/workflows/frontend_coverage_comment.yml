@@ -1,4 +1,4 @@
-name: 'coverage'
+name: 'Frontend Coverage Comment'
 on:
   pull_request:
     branches:
