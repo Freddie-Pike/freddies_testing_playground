@@ -24,4 +24,5 @@ module.exports = {
   verbose: true,
   collectCoverageFrom: ["example_test/**/*.{js,jsx}", "js/**/*.{js,jsx}"],
   coverageDirectory: "docs/coverage",
+  reporters: ["default", "<rootDir>/test/jest_github_action_reporter.js"],
 };
